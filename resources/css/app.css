@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typewriter animation */
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid transparent;
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+
+/* Typing animation */
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+/* Blinking cursor animation */
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* Slow spinning animation */
+
+@keyframes spin-slow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Apply animation to the background */
+
+.animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+}
+
+
+/* Customize the animation appearance */
+
+.relative .absolute {
+    z-index: 0;
+    /* Background is behind the image */
+}
+
+.relative img {
+    z-index: 10;
+    /* Image is above the animation */
+}
+
+
+/* Ensure the images are uniform in size */
+
+.category-img {
+    width: 100%;
+    /* Make images responsive */
+    height: 300px;
+    /* Set a fixed height */
+    object-fit: cover;
+    /* Crop the image to fit the dimensions */
+    border-radius: 8px;
+    /* Optional: Maintain the rounded corners */
+}
+
+
+/* Adjust spacing for better appearance */
+
+#categories {
+    gap: 16px;
+}
